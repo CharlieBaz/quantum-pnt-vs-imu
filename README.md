@@ -11,4 +11,8 @@ This repository contains a Python notebook outlining how rapidly navigation erro
 
 ## Data Collection
 
-To run this with custom data, export walking sessions from the **phyphox** app containing Accelerometer, Gyroscope, Magnetometer, and Location CSVs at ~100 Hz. Ensure a ~5 second stationary window in order to calibrate zero-offsets. Place these CSVs in the data/ directory
+To run this with custom data, export walking sessions from the **phyphox** app containing Accelerometer, Gyroscope, Magnetometer, and Location CSVs at ~100 Hz. Ensure a ~5 second stationary window in order to calibrate zero-offsets. Place these CSVs in the data/ directory.
+
+## Scientific Limitations
+
+This notebook provides a demonstration of inertial drift physics. Smartphone MEMS IMUs are prone to rapid drift to uncorrected bias during double integration. Hence these cannot be used over long periods of time and other methods, such as GPS or better, Quantum PNT can be used to find much more accurate results.
